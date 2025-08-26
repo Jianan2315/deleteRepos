@@ -2,6 +2,17 @@
 Save time on deleting multiple repos
 典型的要用时没心思弄也找不到，平时又用不着的项目。
 
+# 8/24
+1) 修改代码
+2) read js to line 133
+
+# 8/23
+1) huozhe
+
+# 8/22
+1) 重新排版
+2) 修改代码
+
 # 8/21
 1) 把html内容分割成3份html, js, css。css微调。
 2) 测试了API，没问题，下面2张截图
