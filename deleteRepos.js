@@ -44,20 +44,17 @@
             html_url: r.html_url,
             fork: !!r.fork,
             private: !!r.private,
-            archived: !!r.archived,
         }));
     }
 
     function applyFilter() {
         const onlyForks = $('fForks').checked;
         const onlyPrivate = $('fPrivate').checked;
-        const hideArchived = $('fArchived').checked;
         const match = ($('fMatch').value || '').trim().toLowerCase();
 
         state.filtered = state.repos.filter(r => {
             if (onlyForks && !r.fork) return false;
             if (onlyPrivate && !r.private) return false;
-            if (hideArchived && r.archived) return false;
             if (match && !r.name.toLowerCase().includes(match)) return false;
             return true;
         });
@@ -85,16 +82,10 @@
                 <td>
                   <div class="name">
                     <a target="_blank" rel="noopener noreferrer" href="${r.html_url}">${r.full_name}</a>
-                    <div class="badges">
-                      ${r.fork ? '<span class="badge">fork</span>' : ''}
-                      ${r.private ? '<span class="badge">private</span>' : ''}
-                      ${r.archived ? '<span class="badge">archived</span>' : ''}
-                    </div>
                   </div>
                 </td>
                 <td>${r.fork ? '✔️' : '—'}</td>
                 <td>${r.private ? '✔️' : '—'}</td>
-                <td>${r.archived ? '✔️' : '—'}</td>
                 <td class="status" id="st:${r.full_name}">—</td>
             `;
             tbody.appendChild(tr);
@@ -138,7 +129,7 @@
         e.target.checked = allSelected;
     };
 
-    $('fForks').onchange = $('fPrivate').onchange = $('fArchived').onchange = $('fMatch').oninput = applyFilter;
+    $('fForks').onchange = $('fPrivate').onchange = $('fMatch').oninput = applyFilter;
 
     $('clearToken').onclick = () => {
         $('token').value = '';

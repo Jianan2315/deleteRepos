@@ -1,10 +1,14 @@
 # deleteRepos
 Save time on deleting multiple repos
+基于官方API，勾选删除，不需要一个个点。
 典型的要用时没心思弄也找不到，平时又用不着的项目。
+
+# 9/6
+1) 代码删减，能正常使用。虽然还能删减，但懒得弄了。
+2) AI代码优势：模糊的简单需求都完成的很好。
 
 # 8/24
 1) 修改代码
-2) read js to line 133
 
 # 8/23
 1) huozhe

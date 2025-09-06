@@ -4,9 +4,6 @@
     --muted: #9aa4b2;
     --text: #e5e7eb;
     --primary: #60a5fa;
-    --danger: #ef4444;
-    --success: #22c55e;
-    --warn: #f59e0b;
     --border: #243244;
 }
 
@@ -119,11 +116,6 @@ input[type="text"]:focus, input[type="password"]:focus {
     background: #271515;
 }
 
-.btn-success {
-    border-color: #14532d;
-    background: #13221a;
-}
-
 .btn[disabled] {
     opacity: .6;
     cursor: not-allowed;
@@ -193,22 +185,6 @@ tbody tr:hover {
     flex-direction: column;
 }
 
-.badges {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-    margin-top: 4px;
-}
-
-.badge {
-    font-size: 11px;
-    padding: 3px 6px;
-    border-radius: 6px;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    background: #0b1324;
-}
-
 .status {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 12px;
@@ -232,11 +208,6 @@ tbody tr:hover {
     color: var(--muted);
     font-size: 12px;
     margin-top: 8px;
-}
-
-.danger-text {
-    color: var(--danger);
-    font-weight: 600;
 }
 
 a {
